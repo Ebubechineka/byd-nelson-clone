@@ -1,84 +1,42 @@
-# BYD Nelson — Demo Sale Site Clone
+# BYD Nelson — Demo Sale Site Build
 
-A static, self-contained mirror of the **BYD Nelson Demo Sale** page and its supporting
-site (Car Company Nelson / BYD New Zealand). Every page, stylesheet, script, image and
-font is served from this repository — there are **no external dependencies and no
-redirects** to the original site or any third party.
+A static build of the BYD Nelson Demo Sale site and its supporting pages — 79 pages, all assets mirrored, no external dependencies.
 
-## Entry point
+**[→ View the live site](https://ebubechineka.github.io/byd-nelson-clone/)**
 
-| | |
-|---|---|
-| **Main page** | [`byd-nelson_v2/byd-nelson-demo-sale/index.html`](byd-nelson_v2/byd-nelson-demo-sale/index.html) |
-| **Site home** | [`byd-nelson_v2/index.html`](byd-nelson_v2/index.html) |
-| **Pages** | 79 HTML files |
-| **Files** | 1,684 |
-| **Size** | ~260 MB |
+<img src="screenshot.png" alt="BYD Nelson — Demo Sale Site Build screenshot" width="100%">
 
-## Structure
+## What this is
 
-```
-byd-nelson_v2/                     # pages (mirrors the original /webpages/byd-nelson_v2/)
-├── byd-nelson-demo-sale/          # the demo-sale landing page
-├── index.html                     # site home
-├── latest-news/                   # news index
-├── vehicle-details/
-│   ├── vehicle/                   # individual vehicle detail pages
-│   │   ├── 2026-BYD-Shark6/
-│   │   ├── 2026-BYD-Sealion6/
-│   │   ├── 2026-BYD-Sealion8/
-│   │   └── 2026-BYD-Atto2/
-│   ├── bundles/                   # site CSS + JS (sitestyles, foundation, photoswipe…)
-│   ├── buyerscore/style/          # review-widget CSS + bs-icons webfont
-│   ├── userfiles/styles/          # icons-custom webfont + styles
-│   ├── Motorcentral/VehicleData/  # vehicle photography
-│   ├── Userfiles/Image/           # logos and icons
-│   └── extimg/                    # partner logos
-├── p-*.html                       # individual content pages
-└── <slug>/index.html              # news articles and model pages
+A static build of the BYD Nelson Demo Sale campaign site, made as a front-end study of how a promotional campaign page is put together: the hero, the offer, the stock list and the enquiry path.
 
-byd-nelson/                        # shared assets (mirrors /webpages/byd-nelson/)
-└── wp-content/uploads/            # WordPress media library
-```
+Every page, stylesheet, script, image and font is served from this repository — there are no external dependencies and no redirects to the original site or any third party.
 
-All internal links are **relative**, so the site works unchanged from a
-GitHub Pages project subpath (`https://<user>.github.io/<repo>/`).
+## What's inside
 
-## Features
+- 79 HTML pages
+- 1,684 files, all local
+- Zero external dependencies
+- Entry point: `byd-nelson_v2/byd-nelson-demo-sale/index.html`
 
-- Full site navigation, including the mobile hamburger menu
-- Vehicle detail pages with photo galleries and specification tables
-- News article pages
-- Contact and finance enquiry forms (client-side rendering and validation)
-- All original styling, fonts and imagery preserved
+## Technology
 
-## Running locally
+- HTML, CSS and JavaScript
+- Static site — no build step required
+- Deployed on GitHub Pages
 
-Any static file server works. From the repository root:
+## Run it locally
 
 ```bash
 python3 -m http.server 8000
+# then open http://localhost:8000/byd-nelson_v2/byd-nelson-demo-sale/
 ```
 
-Then open <http://localhost:8000/byd-nelson_v2/byd-nelson-demo-sale/index.html>.
+## Note
 
-> Opening the HTML files directly via `file://` will not work correctly — the pages
-> rely on relative paths that need an HTTP origin.
+A front-end study build. All brand marks, imagery and copy belong to BYD and the dealership; the build work is what this repository demonstrates.
 
-## Deploying
 
-Pushing to `main` triggers the included GitHub Actions workflow
-([`.github/workflows/pages.yml`](.github/workflows/pages.yml)), which publishes the
-repository to GitHub Pages. The site is then available at:
+---
 
-```
-https://<user>.github.io/<repo>/byd-nelson_v2/byd-nelson-demo-sale/index.html
-```
-
-## Notes
-
-- This is a **static archive**. Forms that originally posted to a server-side endpoint
-  render and validate as normal but cannot submit — there is no backend.
-- Analytics and tracking scripts from the original site are not active here.
-- Content, text, images, structure and styling are reproduced as-is; nothing has been
-  redesigned or rewritten.
+<sub>Built by **[Benito K Chukwuemeka](https://github.com/Ebubechineka)** · [Golden Vista Global](https://ebubechineka.github.io/golden-vista-global/) — business websites, landing pages and web apps for clients in Nigeria and worldwide.</sub>
